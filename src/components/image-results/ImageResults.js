@@ -1,10 +1,6 @@
-// ** for this project we have made account in Pixabay   <--- https://pixabay.com 
-// ** this is a class based component <--- use of rcc 
-
-
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { GridList, GridTile } from 'material-ui/GridList'  // to make the images in grid format
+import { GridList, GridTile } from 'material-ui/GridList'  
 import IconButton from 'material-ui/IconButton'  
 import ZoomIn from 'material-ui/svg-icons/action/zoom-in'
 import Dialog from 'material-ui/Dialog'
@@ -14,27 +10,26 @@ import FlatButton from 'material-ui/FlatButton'
 
     state = {                  
         open: false,
-        currentImg: ''  // this property is used so that we can know which image to load inside the dialog
+        currentImg: ''  
     }
 
     handleOpen = (img) => {
-        this.setState({ open: true, currentImg: img })     // setState() is same as useState() of functional component
+        this.setState({ open: true, currentImg: img })    
     }
 
     handleClose = () => {
-        this.setState({ open: false })    // setState() is same as useState() of functional component
+        this.setState({ open: false })    
     }
 
   render() {
 
     let imageListContent;
 
-    const { images } = this.props;   // this is same as passing images as prop in functional component
-
+    const { images } = this.props;   
     if(images) {
         imageListContent = (
             <GridList cols = {3}>
-                {images.map((img) => (                  // as images are coming in the form of array.
+                {images.map((img) => (                  
                     <GridTile
                       title = {img.tags}
                       key = {img.id}
