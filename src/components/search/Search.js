@@ -15,7 +15,7 @@ import ImageResults from '../image-results/ImageResults'
         images: []
     }
 
-    // Imp step <--- understand it
+
     onTextChange = (e) => { 
         const val = e.target.value;
         this.setState({ [e.target.name]: val }, () => {   
