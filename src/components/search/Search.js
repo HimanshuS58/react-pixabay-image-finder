@@ -1,13 +1,9 @@
-// ** for this project we have made account in Pixabay  <--- https://pixabay.com
-// ** this is a class based component <--- use of rcc 
- 
-
 import React, { Component } from 'react'
 import TextField from 'material-ui/TextField'
 import SelectField from 'material-ui/SelectField'
 import MenuItem from 'material-ui/MenuItem'
-import axios from 'axios'  //<--- study it
-import ImageResults from '../image-results/ImageResults'  // two dots(..) because search and ImageResults are both in same folder
+import axios from 'axios'  
+import ImageResults from '../image-results/ImageResults'  
 
  class Search extends Component {
 
@@ -22,8 +18,7 @@ import ImageResults from '../image-results/ImageResults'  // two dots(..) becaus
     // Imp step <--- understand it
     onTextChange = (e) => { 
         const val = e.target.value;
-        this.setState({ [e.target.name]: val }, () => {   // setState() is same as useState() of functional component
-                                                          // here in setState() we are updating the 'searchText' property
+        this.setState({ [e.target.name]: val }, () => {   
             if(val === '') {
               this.setState({ images: []})
             }
@@ -37,10 +32,9 @@ import ImageResults from '../image-results/ImageResults'  // two dots(..) becaus
         })
     }
 
-// Imp step <--- understand it
+
     onAmountChange = (e, index, value) => {
-        this.setState({ amount: value })     // setState() is same as useState() of functional component
-                                             // Note: here 'value' is of MenuItem
+        this.setState({ amount: value })     
     }
 
 
