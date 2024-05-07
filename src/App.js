@@ -1,7 +1,3 @@
-// ** for this project we have made account in Pixabay  <--- https://pixabay.com
-// Also we are using class based components in this project <-- like: Search.js, ImageResults.js
-// use Rafce
-
 import './App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
